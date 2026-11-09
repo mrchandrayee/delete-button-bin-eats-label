@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+*{box-sizing:border-box}
+:root{--red1:#e92e51;--red2:#970d2e;--navy:#30384d;--navy2:#111522}
+body{margin:0;min-height:100vh;background:#08090f;color:#f5f5fa;display:grid;place-items:center;padding:24px;font-family:Inter,system-ui,sans-serif}
+.page{width:min(100%,560px);text-align:center}
+header{margin-bottom:44px}
+h1{font-size:14px;line-height:1.15;margin:0 0 2px;font-weight:800;letter-spacing:-.3px}
+header p{font-size:14px;font-weight:800;color:#ff8099;margin:0;letter-spacing:-.3px}
+.stage{height:74px;background:#f2f1f5;border-radius:6px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;gap:16px;box-shadow:0 10px 25px #0005}
+.delete-button{height:26px;min-width:61px;padding:0 10px;border:0;border-radius:18px;display:flex;align-items:center;justify-content:center;gap:5px;position:relative;overflow:visible;color:#fff;cursor:pointer;font:600 8px Inter,sans-serif;box-shadow:inset 0 1px 0 #ffffff35,0 2px 4px #0003;transition:width .42s cubic-bezier(.2,.8,.2,1),min-width .42s,background .25s,box-shadow .25s}
+.delete-button.red{background:linear-gradient(110deg,var(--red1),var(--red2));}
+.delete-button.dark{background:linear-gradient(110deg,#485169,#121725)}
+.trash{width:12px;height:14px;flex:none;display:grid;place-items:center;position:relative;z-index:2}
+.trash svg{width:12px;height:14px;fill:none;stroke:#fff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.trash .lid{transform-origin:5px 6px;transition:transform .22s ease}
+.label{display:inline-block;white-space:nowrap;opacity:1;transform:translateX(0);transform-origin:left center;transition:opacity .22s,transform .38s cubic-bezier(.5,0,.2,1),max-width .4s;max-width:38px}
+.delete-button.eating .trash .lid{transform:rotate(-35deg) translate(-1px,-1px)}
+.delete-button.eating .label{opacity:0;transform:translate(-8px,-13px) scale(.15);max-width:0}
+.delete-button.icon-only{min-width:26px;width:26px;padding:0;gap:0}
+.delete-button.icon-only .label{max-width:0;width:0;overflow:hidden}
+.delete-button.pulse:after{content:"";position:absolute;inset:-5px;border:1.4px solid currentColor;border-radius:50%;animation:bin-ring .65s ease-out forwards;pointer-events:none}
+.delete-button:hover{filter:brightness(1.08);box-shadow:inset 0 1px 0 #ffffff45,0 4px 9px #0003}
+.delete-button:focus-visible{outline:2px solid #a995ff;outline-offset:4px}
+.hint{font-size:9px;color:#81818e;margin:24px 0 12px;min-height:12px}
+.reset{border:1px solid #373746;background:transparent;color:#aaa9b7;border-radius:20px;padding:7px 13px;font-size:8px;cursor:pointer}
+.reset:hover{background:#191923}
+footer{margin-top:25px;color:#888796;font-size:8px;font-weight:700;letter-spacing:1.2px}
+.dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:#ff708d;margin:0 5px 1px 0}
+@keyframes bin-ring{0%{opacity:.7;transform:scale(.65)}100%{opacity:0;transform:scale(1.6)}}
+@media(max-width:380px){.stage{gap:9px;padding:0 9px}.delete-button{padding:0 8px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}

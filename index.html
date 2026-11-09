@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111111">
+  <!-- Primary SEO -->
+  <title>Delete Button — The Bin Eats The Label | mrchandrayee</title>
+  <meta name="description" content="A playful delete button where the bin icon chomps and swallows the label on click. Pure HTML, CSS & JavaScript.">
+  <meta name="author" content="mrchandrayee">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mrchandrayee.github.io/delete-button-bin-eats-label/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mrchandrayee.github.io/delete-button-bin-eats-label/">
+  <meta property="og:title" content="Delete Button — The Bin Eats The Label | mrchandrayee">
+  <meta property="og:description" content="A playful delete button where the bin icon chomps and swallows the label on click. Pure HTML, CSS & JavaScript.">
+  <meta property="og:image" content="https://mrchandrayee.github.io/delete-button-bin-eats-label/preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://mrchandrayee.github.io/delete-button-bin-eats-label/">
+  <meta name="twitter:title" content="Delete Button — The Bin Eats The Label | mrchandrayee">
+  <meta name="twitter:description" content="A playful delete button where the bin icon chomps and swallows the label on click. Pure HTML, CSS & JavaScript.">
+  <meta name="twitter:image" content="https://mrchandrayee.github.io/delete-button-bin-eats-label/preview.png">
+  <meta name="twitter:creator" content="@mrchandrayee">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Delete Button — The Bin Eats The Label",
+    "description": "A playful delete button where the bin icon chomps and swallows the label on click. Pure HTML, CSS & JavaScript.",
+    "url": "https://mrchandrayee.github.io/delete-button-bin-eats-label/",
+    "author": { "@type": "Person", "name": "mrchandrayee", "url": "https://github.com/mrchandrayee" },
+    "applicationCategory": "WebApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+<meta name="theme-color" content="#08090f">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+  <header>
+    <h1>Delete Button</h1>
+    <p>The Bin Eats The Label</p>
+  </header>
+  <section class="stage" aria-label="Delete button animation demo">
+    <button class="delete-button red" type="button" aria-label="Delete item">
+      <span class="trash" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path class="lid" d="M4.5 6.5h15M9 6.5V4.7h6v1.8M7 8.5l.8 11h8.4l.8-11M10 10v7M14 10v7"/></svg>
+      </span>
+      <span class="label">Delete</span>
+    </button>
+    <button class="delete-button dark" type="button" aria-label="Delete item">
+      <span class="trash" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path class="lid" d="M4.5 6.5h15M9 6.5V4.7h6v1.8M7 8.5l.8 11h8.4l.8-11M10 10v7M14 10v7"/></svg>
+      </span>
+      <span class="label">Delete</span>
+    </button>
+  </section>
+  <p class="hint" id="hint" aria-live="polite">Hover or click a button. The bin eats its label.</p>
+  <button class="reset" id="reset" type="button">↻ Reset animation</button>
+  <footer><span class="dot"></span> CODE_AND_CHILL</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
